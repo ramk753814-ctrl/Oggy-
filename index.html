@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oggy Mobile Repairing</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f2f2f2;
+  color:#111;
+}
+
+header{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#00e676;
+}
+
+header p{
+  margin-top:8px;
+  color:#ddd;
+}
+
+.container{
+  max-width:700px;
+  margin:auto;
+  padding:18px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:18px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+h2{
+  text-align:center;
+  margin-bottom:16px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.service{
+  background:#f5f5f5;
+  padding:18px 8px;
+  text-align:center;
+  border-radius:14px;
+  font-weight:bold;
+}
+
+.price{
+  display:flex;
+  justify-content:space-between;
+  padding:14px 3px;
+  border-bottom:1px solid #eee;
+}
+
+.price b{
+  color:#00a86b;
+}
+
+.offer{
+  background:#111;
+  color:white;
+  text-align:center;
+  border-radius:18px;
+  padding:23px 15px;
+  margin-bottom:18px;
+}
+
+.offer h2{
+  color:#00e676;
+}
+
+.offer p{
+  margin:7px 0;
+}
+
+.spinBtn{
+  border:0;
+  background:#00e676;
+  color:#111;
+  padding:14px 25px;
+  border-radius:30px;
+  font-size:17px;
+  font-weight:bold;
+  margin-top:12px;
+}
+
+.result{
+  min-height:32px;
+  margin-top:18px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.contact{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:18px;
+}
+
+.contact a{
+  text-decoration:none;
+  text-align:center;
+  padding:15px;
+  border-radius:30px;
+  color:white;
+  font-weight:bold;
+  font-size:17px;
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.instagram{
+  background:#E1306C;
+}
+
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:24px 10px;
+  margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    OGGY <span>MOBILE REPAIRING</span>
+  </div>
+
+  <p>📱 Repair • Display • Battery • Charging • Software</p>
+</header>
+
+
+<div class="container">
+
+  <!-- SERVICES -->
+  <div class="card">
+
+    <h2>🔧 Our Services</h2>
+
+    <div class="services">
+
+      <div class="service">📱 Display Repair</div>
+
+      <div class="service">🔋 Battery Change</div>
+
+      <div class="service">⚡ Charging Repair</div>
+
+      <div class="service">💻 Software Problem</div>
+
+    </div>
+
+  </div>
+
+
+  <!-- PRICE LIST -->
+  <div class="card">
+
+    <h2>💰 Price List</h2>
+
+    <div class="price">
+      <span>Display Change</span>
+      <b>₹999</b>
+    </div>
+
+    <div class="price">
+      <span>Display + Tempered</span>
+      <b>₹1049</b>
+    </div>
+
+    <div class="price">
+      <span>Quality Wala Folder</span>
+      <b>₹1199</b>
+    </div>
+
+    <div class="price">
+      <span>Quality Folder + Tempered</span>
+      <b>₹1249</b>
+    </div>
+
+    <div class="price">
+      <span>Charging Problem</span>
+      <b>₹299</b>
+    </div>
+
+    <div class="price">
+      <span>Battery</span>
+      <b>₹800+</b>
+    </div>
+
+    <div class="price">
+      <span>Software Problem</span>
+      <b>₹399+</b>
+    </div>
+
+  </div>
+
+
+  <!-- LUCKY SPIN -->
+  <div class="offer">
+
+    <h2>🎁 OGGY LUCKY SPIN</h2>
+
+    <p>Instagram Follow karo aur Free Spin Chance pao!</p>
+
+    <p>🎧 Free Earphones</p>
+    <p>🔌 Free Data Cable</p>
+    <p>💸 ₹20 OFF</p>
+    <p>⚡ Free Charging Check</p>
+
+    <!-- INSTAGRAM -->
+    <a
+      href="https://www.instagram.com/"
+      target="_blank"
+      style="
+      display:inline-block;
+      margin-top:12px;
+      background:#E1306C;
+      color:white;
+      padding:12px 22px;
+      border-radius:25px;
+      text-decoration:none;
+      font-weight:bold;
+      ">
+      📸 Instagram Open Karein
+    </a>
+
+    <br>
+
+    <button
+      class="spinBtn"
+      onclick="spin()">
+      🎯 FOLLOW → SPIN
+    </button>
+
+    <div
+      class="result"
+      id="result">
+    </div>
+
+  </div>
+
+
+  <!-- WHATSAPP -->
+  <div class="card">
+
+    <h2>📲 Mobile Repair Karwana Hai?</h2>
+
+    <p style="text-align:center;">
+      Apna mobile Oggy Mobile Repairing par check karwao.
+    </p>
+
+    <div class="contact">
+
+      <!-- EXACT WHATSAPP NUMBER -->
+      <a
+        class="whatsapp"
+        href="https://wa.me/919310769752"
+        target="_blank">
+        💬 WhatsApp Par Message Karein
+      </a>
+
+      <!-- INSTAGRAM -->
+      <a
+        class="instagram"
+        href="https://www.instagram.com/"
+        target="_blank">
+        📸 Instagram Open Karein
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <h3>OGGY MOBILE REPAIRING</h3>
+
+  <p style="margin-top:8px;">
+    📱 Repair • 🔋 Battery • ⚡ Charging • 💻 Software
+  </p>
+
+  <p style="margin-top:10px;">
+    © 2026 Oggy Mobile Repairing
+  </p>
+
+</footer>
+
+
+<script>
+
+let spinning = false;
+
+function spin(){
+
+  if(spinning) return;
+
+  spinning = true;
+
+  let result = document.getElementById("result");
+
+  result.innerHTML = "3";
+
+  setTimeout(function(){
+    result.innerHTML = "2";
+  },1000);
+
+  setTimeout(function(){
+    result.innerHTML = "1";
+  },2000);
+
+  setTimeout(function(){
+
+    let prizes = [
+      "🎧 FREE EARPHONES!",
+      "🔌 FREE DATA CABLE!",
+      "💸 ₹20 OFF!",
+      "⚡ FREE CHARGING CHECK!",
+      "🎉 NEXT TIME TRY AGAIN!"
+    ];
+
+    let prize =
+      prizes[Math.floor(Math.random()*prizes.length)];
+
+    result.innerHTML = prize;
+
+    spinning = false;
+
+  },3000);
+
+}
+
+</script>
+
+</body>
+  </html>
